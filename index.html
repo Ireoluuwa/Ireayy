@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Aurora Vega • Creative Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Hero / Intro -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1 class="name reveal">Ire</h1>
+      <p class="tagline reveal delay-1">Actress • Prompt Engineer • Art Director</p>
+      <div class="hero-buttons reveal delay-2">
+        <a href="#projects" class="btn primary">View My Work</a>
+        <a href="#contact" class="btn outline">Let's Talk</a>
+      </div>
+    </div>
+
+    <div class="floating-portrait">
+      <img src="IMG_7893.JPG" alt="Aurora Vega">
+    </div>987
+
+    <div class="scroll-hint">Scroll to explore <span>↓</span></div>
+  </section>
+
+  <!-- About -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <h2>Hello, I'm Aurora</h2>
+          <p class="lead">I create visual poetry that makes hearts skip a beat — whether through editorial photography, brand campaigns, or intimate personal projects.</p>
+          <p>I believe the most powerful images don't just show — they <strong>feel</strong>. My work lives at the intersection of softness and strength, dreamlike atmospheres and raw emotion.</p>
+          
+          <div class="stats">
+            <div class="stat-item">
+              <span class="number">42</span>
+              <span class="label">Projects Completed</span>
+            </div>
+            <div class="stat-item">
+              <span class="number">18</span>
+              <span class="label">Countries Explored</span>
+            </div>
+            <div class="stat-item">
+              <span class="number">9</span>
+              <span class="label">International Features</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-image reveal delay-1">
+          <img src="IMG_7822.JPG" alt="Aurora working">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section class="projects" id="projects">
+    <div class="container">
+      <h2 class="section-title reveal">Selected Work</h2>
+
+      <div class="projects-grid">
+        <a href="#" class="project-card reveal">
+          <div class="project-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1519741497674-281450b3b0b0?auto=format&fit=crop&q=80&w=1200" alt="Project 1">
+          </div>
+          <div class="project-info">
+            <h3>Silk & Shadows</h3>
+            <p>Editorial / 2025</p>
+          </div>
+        </a>
+
+        <a href="#" class="project-card reveal delay-1">
+          <div class="project-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&q=80&w=1200" alt="Project 2">
+          </div>
+          <div class="project-info">
+            <h3>Midnight Bloom</h3>
+            <p>Personal Series / 2024</p>
+          </div>
+        </a>
+
+        <a href="#" class="project-card reveal delay-2">
+          <div class="project-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&q=80&w=1200" alt="Project 3">
+          </div>
+          <div class="project-info">
+            <h3>Luna Campaign</h3>
+            <p>Brand / 2025</p>
+          </div>
+        </a>
+
+        <a href="#" class="project-card reveal delay-3">
+          <div class="project-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1517841902196-5ebfa0a158b5?auto=format&fit=crop&q=80&w=1200" alt="Project 4">
+          </div>
+          <div class="project-info">
+            <h3>Velvet Reverie</h3>
+            <p>Fashion Editorial / 2024</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact / Footer -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <h2 class="section-title reveal">Let's Create Something Beautiful</h2>
+      <p class="contact-text reveal delay-1">Whether you have a dream project or just want to say hello, I'd love to hear from you.</p>
+
+      <div class="contact-buttons reveal delay-2">
+        <a href="mailto:hello@auroravega.com" class="btn primary large">Email Me</a>
+        <a href="https://instagram.com" target="_blank" class="btn outline large">Instagram</a>
+      </div>
+
+      <div class="social-links reveal delay-3">
+        <a href="#">Instagram</a>
+        <a href="#">Pinterest</a>
+        <a href="#">Behance</a>
+        <a href="#">Contact</a>
+      </div>
+
+      <footer>
+        <p>© 2026 Ire Akande — Made with ♡</p>
+      </footer>
+    </div>
+  </section>
+
+  <script>
+    // Simple reveal on scroll
+    const reveals = document.querySelectorAll('.reveal');
+    
+    function checkReveal() {
+      reveals.forEach(el => {
+        const windowHeight = window.innerHeight;
+        const elementTop = el.getBoundingClientRect().top;
+        const elementVisible = 120;
+        
+        if (elementTop < windowHeight - elementVisible) {
+          el.classList.add('active');
+        }
+      });
+    }
+    
+    window.addEventListener('scroll', checkReveal);
+    // Trigger once on load
+    checkReveal();
+  </script>
+</body>
+</html>
